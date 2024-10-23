@@ -14,7 +14,14 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                pacifico: ['Pacifico', "sans-serif"],
+                nunito:['Nunito','sans-serif']
             },
+            colors:{
+                "orangePizza": "#E5612F",
+                "greyPizza":"#F3F5F6"
+
+            }
         },
     },
 
