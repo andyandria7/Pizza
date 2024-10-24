@@ -1,16 +1,12 @@
 <script setup>
-    import Header from "./Header.vue";
-    import Footer from "./Footer.vue";
+import Header from "./Header.vue";
+import Footer from "./Footer.vue";
 </script>
 
 <template>
     <Header></Header>
-    <div>
-        <slot></slot>
-    </div>
+    <slot></slot>
     <Footer></Footer>
 </template>
 
-<style>
-    
-</style>
+<style></style>
