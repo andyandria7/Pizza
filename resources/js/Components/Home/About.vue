@@ -18,7 +18,8 @@ import Primary from '../Button/Primary.vue';
                     data-aos-delay="600">
             </div>
             <div class="space-y-4 text-white pr-20 w-96 lg:w-auto lg:lg-0">
-                <div class="flex items-center gap-4" data-aos="fade-right" 
+                <div class="flex items-center gap-4" 
+                        data-aos="fade-right" 
                         data-aos-offset="300"
                         data-aos-easing="ease-in-sine">
                     <p class="font-pacifico text-orangePizza text-2xl" 
