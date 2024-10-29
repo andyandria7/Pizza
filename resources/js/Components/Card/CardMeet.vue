@@ -23,10 +23,10 @@ defineProps({
         <p class="text-lg font-pacifico text-orangePizza">{{ name }}</p>
         <p class="text-sm font-semibold text-gray-500">{{ rols }}</p>
         <div class="flex gap-4 mt-4">
-            <LucideFacebook class="w-6 h-6 text-blue-600" />
-            <LucideInstagram class="w-6 h-6 text-pink-600" />
-            <LucideTwitter class="w-6 h-6 text-blue-400" />
-            <LucideLinkedin class="w-6 h-6 text-blue-800" />
+            <LucideFacebook class="w-6 h-6 hover:text-blue-600" />
+            <LucideInstagram class="w-6 h-6 hover:text-pink-600" />
+            <LucideTwitter class="w-6 h-6 hover:text-blue-400" />
+            <LucideLinkedin class="w-6 h-6 hover:text-blue-800" />
         </div>
     </div>
 </template>

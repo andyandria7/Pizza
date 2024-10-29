@@ -5,7 +5,7 @@ import CardMeet from '../Card/CardMeet.vue';
 </script>
 
 <template>
-    <div class="max-w-screen-2xl mx-auto py-10">
+    <div class="max-w-screen-2xl mx-auto py-10 meet">
         <div class="flex items-center justify-center py-7">
             <div class="flex items-center gap-4" data-aos="fade-right" data-aos-offset="300"
                 data-aos-easing="ease-in-sine">
@@ -31,7 +31,7 @@ import CardMeet from '../Card/CardMeet.vue';
                 rols="Head Chef"
                 data-aos="fade-down"
                 data-aos-offset="300"
-                data-aos-delay="1100"
+                data-aos-delay="1200"
                 
                 />
                 <CardMeet
@@ -40,7 +40,7 @@ import CardMeet from '../Card/CardMeet.vue';
                 rols="Head Chef"
                 data-aos="fade-down-left"
                 data-aos-offset="300"
-                data-aos-delay="1200"
+                data-aos-delay="1100"
 
                 />
             </div>
@@ -51,5 +51,8 @@ import CardMeet from '../Card/CardMeet.vue';
 <style>
 .custom-shadow {
     box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.8);
+}
+.meet{
+    overflow: hidden;
 }
 </style>
