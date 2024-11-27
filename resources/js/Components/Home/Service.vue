@@ -4,7 +4,7 @@ import RoundCard from '../Card/RoundCard.vue';
 </script>
 
 <template>
-    <div class="py-10 max-w-screen-2xl mx-auto">
+    <div class="py-10 max-w-screen-2xl mx-auto service">
         <div class="flex items-center justify-center py-7">
             <div class="flex items-center gap-4" data-aos="fade-right" data-aos-delay="200"  data-aos-offset="700">
                 <div class="h-2 w-20 bg-orangePizza"></div>
@@ -32,4 +32,8 @@ import RoundCard from '../Card/RoundCard.vue';
     </div>
 </template>
 
-<style></style>
+<style>
+.service{
+    overflow-x: hidden;
+}
+</style>

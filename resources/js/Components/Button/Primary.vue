@@ -8,7 +8,7 @@ defineProps({
 })
 </script>
 <template>
-    <Link v-if="link" :href="link" class="relative group hover:text-orangePizza">
+    <Link v-if="link" :href="link" class="relative group">
         <slot></slot>
     </Link>
 

@@ -8,16 +8,14 @@ use Inertia\Inertia;
 
 
 Route::get('/', [RestorantController::class, 'index'])->name('home');
+Route::get('/menu', [RestorantController::class, 'menu'])->name('menu');
+Route::get('/menu/{id}', [RestorantController::class, 'menuView'])->name('menuView');
+
+Route::get('/loginPizza', [RestorantController::class, "login"])->name('loginPizza');
+Route::get('/registerPizza', [RestorantController::class, "register"])->name('registerPizza');
+Route::get('/Compte', [RestorantController::class, "compte"])->name('compte');
+Route::get('/commandes', [RestorantController::class, "commandes"])->name('commandes');
 
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
+Route::get('/dashboard', [RestorantController::class, "dashboard"])->name('dashboard');
 require __DIR__.'/auth.php';

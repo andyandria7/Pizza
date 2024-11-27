@@ -1,0 +1,33 @@
+<template>
+    <svg
+        width="23"
+        height="23"
+        viewBox="0 0 23 23"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <rect width="6.80163" height="6.80163" rx="1.4" fill="currentColor" />
+        <rect
+            y="10.2024"
+            width="6.80163"
+            height="6.80163"
+            rx="1.4"
+            fill="currentColor"
+        />
+        <rect
+            x="10.2021"
+            width="6.80163"
+            height="6.80163"
+            rx="1.4"
+            fill="currentColor"
+        />
+        <rect
+            x="10.2021"
+            y="10.2024"
+            width="11.9028"
+            height="11.9028"
+            rx="1.4"
+            fill="currentColor"
+        />
+    </svg>
+</template>
