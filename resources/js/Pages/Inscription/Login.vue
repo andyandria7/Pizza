@@ -29,7 +29,7 @@ const login = () => {
         <header class="flex items-center justify-between">
             <MoveLeft @click="goBack" class="cursor-pointer" />
 
-            <p class="font-pacifico text-3xl">log in</p>
+            <p class="font-pacifico text-3xl">login</p>
             <div></div>
         </header>
         <form @submit.prevent="login" class="px-10 ">
