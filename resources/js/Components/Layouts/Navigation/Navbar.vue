@@ -1,13 +1,14 @@
 <script setup>
-import { Link } from '@inertiajs/vue3';
+import { Link, usePage } from '@inertiajs/vue3';
 import { computed, onMounted, ref } from 'vue';
-import { Menu, X } from 'lucide-vue-next';
+import { Menu, X, Power } from 'lucide-vue-next';
 import SearchIcons from '@/Components/Svg/SearchIcons.vue';
 import Bag from '@/Components/Svg/Bag.vue';
 import Primary from '@/Components/Button/Primary.vue';
 
 const isOpen = ref(false);
 const navref = ref(null);
+const page = usePage();
 
 // recuperation du nom de la page
 const routeName = computed(() => route().current('home'))
@@ -33,6 +34,11 @@ const handleScroll = () => {
     }
 }
 
+const isAuthenticated = computed(() => !!page.props.auth.user);
+
+const deconnection = () => {
+    
+}
 </script>
 
 <template>
@@ -55,16 +61,16 @@ const handleScroll = () => {
             <Primary :link="route('home')" data-aos="fade-down" 
             :class="[routeName ? 'hover:text-orangePizza txt':'hover:text-white txt hover:underline']"
              data-aos-delay="300">Home</Primary>
-            <Primary :link="`/`" 
+            <!-- <Primary :link="`/`" 
              :class="[routeName ? 'hover:text-orangePizza txt':'hover:text-white txt hover:underline']"
             data-aos="fade-down" data-aos-delay="400">About</Primary>
             <Primary :link="`/`" 
              :class="[routeName ? 'hover:text-orangePizza txt':'hover:text-white txt hover:underline']"
-            data-aos="fade-down" data-aos-delay="500">Commande</Primary>
+            data-aos="fade-down" data-aos-delay="500">Commande</Primary> -->
             <Primary :link="route('menu')"
              :class="[routeName ? 'hover:text-orangePizza txt':'hover:text-white txt hover:underline']"
             data-aos="fade-down" data-aos-delay="600">Menu</Primary>
-            <Primary :link="route('compte')"
+            <Primary v-if="isAuthenticated" :link="route('compte')"
              :class="[routeName ? 'hover:text-orangePizza txt':'hover:text-white txt hover:underline']"
             data-aos="fade-down" data-aos-delay="700">Compte</Primary>
         </div>
@@ -77,9 +83,11 @@ const handleScroll = () => {
                 <input type="search" name="search" id="search"
                     class="bg-transparent w-12 h-12 rounded-full border border-white outline-none cursor-pointer focus:w-64 focus:border-orangePizza pl-12 pr-4 transition-all duration-500 ease-in-out  focus:cursor-text">
             </form>
-            <Link :href="route('loginPizza')" class="mt-2" data-aos="fade-left" data-aos-delay="1200" data-aos-easing="ease-out-cubic">
-            
+            <Link :href="route('panier')" class="mt-2" data-aos="fade-left" data-aos-delay="1200" data-aos-easing="ease-out-cubic">
                 <Bag class="hover:text-orangePizza" />
+            </Link>
+            <Link v-if="isAuthenticated" :href="route('logout')" method="post" class="mt-2" data-aos="fade-left" data-aos-delay="1200" data-aos-easing="ease-out-cubic">
+                <Power size="35" />
             </Link>
         </div>
 

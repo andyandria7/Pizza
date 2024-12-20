@@ -21,7 +21,10 @@ const info = [
         <HeaderAuth />
         <NavAuth />
         <div class="lg:p-10 relative min-h-screen-minus-20 lg:left-[22%] lg:w-[76%] p-6">
-            <div v-for="item in info" :key="item.title" class="flex space-x-10">
+            <div v-if="String($page.url) === '/admin' || String($page.url) === '/create'">
+
+            </div>
+            <div v-else  v-for="item in info" :key="item.title" class="flex space-x-10">
                 <Information :image="item.icons" :title="item.title" :number="item.number" :style="item.style" />
             </div>
             <slot></slot>

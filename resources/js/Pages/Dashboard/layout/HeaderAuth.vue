@@ -1,11 +1,12 @@
 <script setup>
 import SearchIcons from '@/Components/Svg/SearchIcons.vue';
+import { Link } from '@inertiajs/vue3';
 import { ChevronDown } from 'lucide-vue-next';
     
 </script>
 
 <template>
-    <div class="bg-orangePizza px-7 py-2 flex justify-between items-center">
+    <div class=" bg-orangePizza px-7 py-2 flex justify-between items-center">
         <a href="/" class="relative flex items-center gap-2" data-aos="flip-right" data-aos-duration="2000" data-aos-easing="ease-out-cubic"
         >
             <img src="/icons/logo.svg" alt="">
@@ -23,10 +24,10 @@ import { ChevronDown } from 'lucide-vue-next';
             </form>
         </div>
         <div class="flex items-center gap-4">
-            <button class="flex cursor-pointer items-center gap-2 bg-white px-4 py-2 rounded-full">
+            <Link :href="route('create')" class="flex cursor-pointer items-center gap-2 bg-white px-4 py-2 rounded-full">
                 <img src="/images/plus.svg" alt="">
                 <p class="hidden lg:block">Ajout Pizza</p>
-            </button>
+            </Link>
             <div class="flex cursor-pointer items-center gap-2">
                 <img src="/images/user.svg" class="h-12" alt="">
             <ChevronDown class="w-5 h-5 text-white" />

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 
 class RestorantController extends Controller
@@ -14,17 +15,13 @@ class RestorantController extends Controller
     public function index(){
         return Inertia::render('Home');
     }
-
+    
     public function menu(){
         return Inertia::render('Menu');
     }
-
-    public function login(){
-        return Inertia::render('Inscription/Login');
-    }
-
-    public function register(){
-        return Inertia::render('Inscription/Register');
+    
+    public function panier(){
+        return Inertia::render('Panier');
     }
 
     public function dashboard(){
@@ -38,4 +35,13 @@ class RestorantController extends Controller
     public function commandes(){
         return Inertia::render('Dashboard/Commandes');
     }
+
+    public function admin(){
+        return Inertia::render('Dashboard/Admin');
+    }
+
+    public function create(){
+        return Inertia::render('Dashboard/Create');
+    }
+
 }
